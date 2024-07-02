@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+#list 1
+wordbank= ["indentation", "spaces"] 
+#list 2
+tlgstudents= ['Albert', 'Anthony', 'Brenden', 'Craig', 'Deja', 'Elihu', 'Eric', 'Giovanni', 'James', 'Joshua', 'Maria', 'Mohamed', 'PJ', 'Philip', 'Sagan', 'Suchit', 'Meka', 'Trey', 'Winton', 'Xiuxiang', 'Yaping', 'Tyler']
+
+#add the number 4 to list 1
+wordbank.append('4')
+
+#var for max sudents in list
+
+maxs = len(tlgstudents)
+
+#input var num 0-20
+num = int(input(f'Pick a number between 1-{maxs}:\n>')) - 1
+
+# pick a student name from list 2 based off of num var
+
+student_name = tlgstudents[num]
+
+print(f'{student_name} always uses {wordbank[2]} {wordbank[1]} to indent.')
