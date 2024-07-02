@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+
+a = [1, 2, 3, 4, 5]
+b = int(input("Pick a number: "))
+
+# Check if b is greater than the last element of list a
+if b > a[-1]:
+    print(f"{b} is greater than the last element of list a")
+else:
+    print(f"{b} is not greater than the last element of list a")
+
