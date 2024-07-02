@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+#list 1
+wordbank= ["indentation", "spaces"] 
+#list 2
+tlgstudents= ['Albert', 'Anthony', 'Brenden', 'Craig', 'Deja', 'Elihu', 'Eric', 'Giovanni', 'James', 'Joshua', 'Maria', 'Mohamed', 'PJ', 'Philip', 'Sagan', 'Suchit', 'Meka', 'Trey', 'Winton', 'Xiuxiang', 'Yaping']
+
+#add the number 4 to list 1
+wordbank.append('4')
+
+#input var num 0-20
+num = int(input('Pick a number between 0-20:\n>'))
+
+# pick a student name from list 2 based off of num var
+
+student_name = tlgstudents[num]
+
+print(f'{student_name} always uses {wordbank[2]} {wordbank[1]} to indent.')
