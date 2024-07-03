@@ -1,0 +1,43 @@
+#!/usr/bin/python3
+    
+#Lesson 26 dictionary lab.
+#dictionary
+marvelchars= {
+"Starlord":
+  {"real name": "peter quill",
+  "powers": "dance moves",
+  "archenemy": "Thanos"},
+
+"Mystique":
+  {"real name": "raven darkholme",
+  "powers": "shape shifter",
+  "archenemy": "Professor X"},
+
+"Hulk":
+  {"real name": "bruce banner",
+  "powers": "super strength",
+  "archenemy": "adrenaline"}}
+
+
+def main():
+    running = 'yes'
+    while running == 'yes':
+        #first prompt
+        char_name = input(' Which character do you want to know about? (Starlord, Mystique, Hulk)\n>')
+        char_name = char_name.capitalize()
+        #second prompt
+        char_stat = input(' What statistic do you want to know about? (real name, powers, archenemy)\n>')
+        char_stat = char_stat.lower()
+        #result var
+        result = marvelchars.get(char_name, {}).get(char_stat, "Please check spelling")
+        if result == 'Please check spelling':
+            print(result)
+            main()
+
+        #final print statement
+        print(f'{char_name}\'s {char_stat} is: {result}')
+        running = input('Would you like to try again?: (yes or no)\n>')
+        running = running.lower()
+        if running == 'no':
+            exit()
+main()
