@@ -1,0 +1,55 @@
+#!/usr/bin/python3
+
+import html, time
+
+trivia= {
+         "category": "Entertainment: Film",
+         "type": "multiple",
+         "question": "Which of the following is NOT a quote from the 1942 film Casablanca? ",
+         "correct_answer": "&quot;Frankly, my dear, I don&#039;t give a damn.&quot;",
+         "incorrect_answers": [
+             "&quot;Here&#039;s lookin&#039; at you, kid.&quot;",
+             "&ldquo;Of all the gin joints, in all the towns, in all the world, she walks into mine&hellip;&rdquo;",
+             "&quot;Round up the usual suspects.&quot;"
+            ]
+        }
+def main():
+    #question from trivia list
+    question = html.unescape(trivia['question'])
+    #corect answer from trivia list
+    correct = html.unescape(trivia['correct_answer'])
+    #incorrect answers from trivia list
+    incorr1 = html.unescape(trivia['incorrect_answers'][0])
+    incorr2 = html.unescape(trivia['incorrect_answers'][1])
+    incorr3 = html.unescape(trivia['incorrect_answers'][2])
+    #print the question
+    print(question + 'is it:')
+    time.sleep (1)
+    #print the options
+    print(f'A: {correct}')
+    time.sleep (1)
+    print(f'B: {incorr1}')
+    time.sleep (1)
+    print(f'C: {incorr2}')
+    time.sleep (1)
+    print(f'D: {incorr3}')
+    answer()
+
+def answer():
+    letter = ['A', 'B', 'C', 'D']
+    ans = input('>')
+    ans = ans.capitalize()
+    if ans not in letter:
+        print('Please type A, B, C, or D')
+        answer()
+    if ans == 'A':
+        print('Correct!')
+        exit()
+    else:
+        print('Incorrect!')
+        answer()
+main()
+
+
+
+
