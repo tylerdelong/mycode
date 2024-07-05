@@ -14,6 +14,7 @@ def main():
     YOU = YOU.capitalize()
     if YOU not in lis:
         print('Please pick a valid option')
+        time.sleep(1)
         main()
     if YOU == 'Rock':
         rock(OPP)
