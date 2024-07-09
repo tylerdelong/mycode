@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+
+bottle = int(input('How many bottles?'))
+one = f'{bottle} bottles of beer'
+two = 'on the wall!'
+three = 'You take one down, pass it around!'
+
+while True:
+    if bottle == 1:
+        print('1 bottle of beer on the wall!\n1 bottle of beer on the wall! 1 bottle of beer! You take one down, pass it around!')
+        break
+    print(f'{one} {two}\n{one}! {three}')
+    bottle -= 1
+    one = f'{bottle} bottles of beer'
+print('No more bottles of beer on the wall!')

@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+count = 0
+with open("dracula.txt", "r") as drac:
+    pr = drac.readlines()
+    for x in pr:
+        if 'vampire' in x.lower():
+            print(x, end='')
+            count += 1
+            with open('vampytimes.txt', 'a') as vamp:
+                print (x, file=vamp)
+print(count)
+
